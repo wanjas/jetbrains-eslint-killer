@@ -1,0 +1,1 @@
+# jetbrains-eslint-killer
