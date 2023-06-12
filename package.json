@@ -1,0 +1,23 @@
+{
+  "name": "jetbrains-eslint-killer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ps-list": "8.1.1",
+    "pidusage": "3.0.2",
+    "chalk": "5.2.0",
+    "fkill": "8.1.0",
+    "numeral": "2.0.6",
+    "lodash": "4.17.21"
+  },
+  "devDependencies": {
+    "prettier": "2.8.8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
