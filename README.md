@@ -6,7 +6,7 @@ This script is a workaround for the issue with eslint integration in JetBrains I
 
 Details are described in [this issue](https://youtrack.jetbrains.com/issue/WEB-57163/Option-to-make-eslint-language-services-expirable-or-limited-in-number) on JetBrains YouTrack.
 
-**Summary**: jetbrains spawns multiple eslint processes that newer die and consume a lot of memory especially when linting Typescript.
+**Summary**: jetbrains spawns multiple eslint processes that never die and consume a lot of memory especially when linting Typescript.
 
 ## The solution
 
