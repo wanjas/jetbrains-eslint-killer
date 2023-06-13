@@ -37,6 +37,6 @@ Try `node main.mjs --max-memory=10 --interval=60` or `node main.mjs --help` for 
                                                       
   -i, --interval               Check interval in seconds. Default: 30 seconds.
                                                       
-  -s, --silent                 Don't output anything. Default: false
+  -s, --silent                 Don't output log messages. Default: false
                                                       
 ```
