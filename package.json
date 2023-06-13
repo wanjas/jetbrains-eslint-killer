@@ -1,6 +1,6 @@
 {
   "name": "jetbrains-eslint-killer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This script is a workaround for the issue with eslint integration in JetBrains IDEs and NX monorepo",
   "main": "main.mjs",
   "scripts": {

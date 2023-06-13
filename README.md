@@ -10,7 +10,7 @@ Details are described in [this issue](https://youtrack.jetbrains.com/issue/WEB-5
 
 ## The solution
 
-This scripts monitors memory consumption of eslint processes and kills them when they exceed `max-memory` down to `optimal-process-count`. 
+This scripts monitors memory consumption of eslint processes and kills them when they exceed `max-memory` down to `optimal-process-count`. Oldest inactive processes are killed first.
 
 ## Disclaimer
 
@@ -23,6 +23,10 @@ Script is tested only on Linux. It should work on Windows and other platforms be
 1. Checkout this repository
 2. Run `pnpm install` or `npm install`
 3. Run `node main.mjs` 
+
+Or you can install package globally: 
+
+`pnpm install -g jetbrains-eslint-killer` and then `jetbrains-eslint-killer` from any directory.
 
 Try `node main.mjs --max-memory=10 --interval=60` or `node main.mjs --help` for more options. 
 

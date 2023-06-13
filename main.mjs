@@ -1,11 +1,11 @@
 import chalk from "chalk";
+import fkill from "fkill";
 import _ from "lodash";
+import numeral from "numeral";
 import pidusage from "pidusage";
 import pslist from "ps-list";
-import numeral from "numeral";
-import fkill from "fkill";
-import { hideBin } from "yargs/helpers";
 import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 import { z } from "zod";
 
 const argv = yargs(hideBin(process.argv))
@@ -94,13 +94,15 @@ async function getEslintProcesses() {
 }
 
 function reportEslintProcesses(processes) {
-  processes.forEach((pr) => {
-    log(
-      `${pr.pid} - ${numeral(pr.memory).format("0.00b")} - ${pr.cpu} - ${
-        pr.command
-      } %`
-    );
-  });
+  if (!SILENT) {
+    processes.forEach((pr) => {
+      log(
+        `${pr.pid} - ${numeral(pr.memory).format("0.00b")} - ${pr.cpu} - ${
+          pr.command
+        } %`
+      );
+    });
+  }
 }
 
 async function thresholdReached(processes) {
