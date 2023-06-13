@@ -1,10 +1,16 @@
 {
   "name": "jetbrains-eslint-killer",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "This script is a workaround for the issue with eslint integration in JetBrains IDEs and NX monorepo",
   "main": "main.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "jetbrains-eslint-killer": "./main.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "ps-list": "8.1.1",
@@ -12,12 +18,21 @@
     "chalk": "5.2.0",
     "fkill": "8.1.0",
     "numeral": "2.0.6",
-    "lodash": "4.17.21"
+    "lodash": "4.17.21",
+    "yargs": "17.7.2",
+    "zod": "3.21.4"
   },
   "devDependencies": {
     "prettier": "2.8.8"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": {
+    "name": "Ivan Belikov",
+    "web": "https://github.com/wanjas"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wanjas/jetbrains-eslint-killer.git"
+  },
+  "license": "unlicense"
 }

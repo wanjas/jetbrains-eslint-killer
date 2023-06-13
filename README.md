@@ -10,16 +10,29 @@ Details are described in [this issue](https://youtrack.jetbrains.com/issue/WEB-5
 
 ## The solution
 
-This scripts monitors memory consumption of eslint processes and kills them when they exceed the limit (6 GB by default).
+This scripts monitors memory consumption of eslint processes and kills them when they exceed `max-memory` down to `optimal-process-count`. 
 
-## Caveat
+## Disclaimer
 
-Script's goal is killing only eslint processes started by the IDE but there is a small chance that it may interfere with other eslint processes started by other utilities. (See how filtration works in the code)
+Script's goal is killing only eslint processes started by the IDE but there is a **very** unlikely chance that it may interfere with other eslint processes started by other utilities. (See how filtration works in the code)
+
+Script is tested only on Linux. It should work on Windows and other platforms because used packages are cross-platform but it is not tested.
 
 ## Usage
 
 1. Checkout this repository
 2. Run `pnpm install` or `npm install`
-3. [optional] Confirm default options in `main.mjs`
-4. Run `node main.mjs` 
+3. Run `node main.mjs` 
 
+Try `node main.mjs --max-memory=10 --interval=60` or `node main.mjs --help` for more options. 
+
+```
+  -m, --max-memory             Maximum allowed memory consumption in GB. Exceeding this limit will lead to killings down to 'optimal-process-count'. Default: 6 GB
+                                                      
+  -c, --optimal-process-count  Number of eslint processes that should be left running if memory threshold is reached. Default: 2
+                                                      
+  -i, --interval               Check interval in seconds. Default: 30 seconds.
+                                                      
+  -s, --silent                 Don't output anything. Default: false
+                                                      
+```

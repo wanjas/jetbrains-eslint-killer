@@ -26,6 +26,9 @@ dependencies:
   yargs:
     specifier: 17.7.2
     version: 17.7.2
+  zod:
+    specifier: 3.21.4
+    version: 3.21.4
 
 devDependencies:
   prettier:
@@ -345,4 +348,8 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+    dev: false
+
+  /zod@3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: false
